@@ -1,9 +1,23 @@
+.sales-overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 20px 0;
+}
+
+.counter-text {
+    font-size: 20px;
+}
+
 .sales-block {
     padding: 20px;
     border: 2px solid #6dad99;
     border-radius: 4px;
     background-color: #e8fff8;
     color: #6dad99;
+    width: 100%;
 }
 
 .purchased-block {
@@ -12,6 +26,7 @@
     border-radius: 4px;
     background-color: #e8f5ff;
     color: #6d81ad;
+    width: 100%;
 }
 
 .available-block {
@@ -20,4 +35,38 @@
     border-radius: 4px;
     background-color: #ffe8e8;
     color: #ad6d6d;
+    width: 100%;
+}
+
+.most-sold-block {
+    display: flex;
+    border: 2px darkgray dashed;
+    background-color: #ececec;
+    border-radius: 4px;
+    padding: 50px 30px;
+    max-width: 1000px;
+}
+
+.bestseller-image-wrapper {
+    width: 200px;
+}
+
+.bestseller-image {
+    max-width: 100%;
+}
+
+.bestseller-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 0 50px;
+    border: 1px solid #6dad99;
+}
+
+.bestseller-price {
+    font-size: 20px;
+}
+
+.bestseller-sizes {
+    font-size: 13px;
 }
