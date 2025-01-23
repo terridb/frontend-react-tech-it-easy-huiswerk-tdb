@@ -1,0 +1,23 @@
+.sales-block {
+    padding: 20px;
+    border: 2px solid #6dad99;
+    border-radius: 4px;
+    background-color: #e8fff8;
+    color: #6dad99;
+}
+
+.purchased-block {
+    padding: 20px;
+    border: 2px solid #6d81ad;
+    border-radius: 4px;
+    background-color: #e8f5ff;
+    color: #6d81ad;
+}
+
+.available-block {
+    padding: 20px;
+    border: 2px solid #ad6d6d;
+    border-radius: 4px;
+    background-color: #ffe8e8;
+    color: #ad6d6d;
+}
