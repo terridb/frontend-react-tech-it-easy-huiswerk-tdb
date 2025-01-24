@@ -1,13 +1,7 @@
 import './App.css';
-import './constants/inventory.js';
-import './helpers/totalTvsSold.js';
 import {bestSellingTv, inventory} from "./constants/inventory.js";
-import getTotalTvsSold from "./helpers/totalTvsSold.js";
-import getTotalTvsPurchased from "./helpers/totalTvsPurchased.js";
-import getTotalTvsAvailable from "./helpers/totalTvsAvailable.js";
-import {generateTvName} from "./helpers/tvNameGenerator.js";
-import {generateTvPrice} from "./helpers/tvPriceGenerator.js";
-import {generateTvScreenSize} from "./helpers/tvScreenSizeGenerator.js";
+import getTotalTvsAvailable, {getTotalTvsPurchased, getTotalTvsSold} from "./helpers/calculateStock.js";
+import {generateTvName, generateTvPrice, generateTvScreenSize} from "./helpers/bestsellingTvDetails.js";
 import checkIcon from "./assets/check.png";
 import minusIcon from "./assets/minus.png";
 
