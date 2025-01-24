@@ -1,3 +1,7 @@
+h2 {
+    margin: 30px 0 10px 0;
+}
+
 .sales-overview {
     display: flex;
     justify-content: space-between;
@@ -43,12 +47,13 @@
     border: 2px darkgray dashed;
     background-color: #ececec;
     border-radius: 4px;
-    padding: 50px 30px;
+    /*padding: 50px 30px;*/
     max-width: 1000px;
 }
 
 .bestseller-image-wrapper {
     width: 200px;
+    margin: 35px 0 35px 35px;
 }
 
 .bestseller-image {
@@ -59,8 +64,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 0 0 50px;
-    border: 1px solid #6dad99;
+    margin: 20px 20px 20px 30px;
 }
 
 .bestseller-price {
@@ -69,4 +73,23 @@
 
 .bestseller-sizes {
     font-size: 13px;
+}
+
+.bestseller-usps {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.usp-icon {
+    height: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 2px 5px;
 }

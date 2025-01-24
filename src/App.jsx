@@ -8,6 +8,8 @@ import getTotalTvsAvailable from "./helpers/totalTvsAvailable.js";
 import {generateTvName} from "./helpers/tvNameGenerator.js";
 import {generateTvPrice} from "./helpers/tvPriceGenerator.js";
 import {generateTvScreenSize} from "./helpers/tvScreenSizeGenerator.js";
+import checkIcon from "./assets/check.png";
+import minusIcon from "./assets/minus.png";
 
 function App() {
     const totalTvsSold = getTotalTvsSold(inventory, bestSellingTv);
@@ -16,6 +18,11 @@ function App() {
     const bestSellingTvName = generateTvName(bestSellingTv);
     const bestSellingTvPrice = generateTvPrice(bestSellingTv);
     const bestSellingTvScreenSizes = generateTvScreenSize(bestSellingTv);
+
+    function sayButtonTitle(title) {
+        console.log(title);
+    }
+
     return (
         <>
             <main>
@@ -44,7 +51,31 @@ function App() {
                         <p>{bestSellingTvName}</p>
                         <p className="bestseller-price">{bestSellingTvPrice}</p>
                         <p className="bestseller-sizes">{bestSellingTvScreenSizes}</p>
+                        <div className="bestseller-usps">
+                            <img className="usp-icon" src={checkIcon} alt="Check icon"/>
+                            <p>wifi</p>
+                            <img className="usp-icon" src={minusIcon} alt="Minus icon"/>
+                            <p>speech</p>
+                            <img className="usp-icon" src={checkIcon} alt="Check icon"/>
+                            <p>hdr</p>
+                            <img className="usp-icon" src={checkIcon} alt="Check icon"/>
+                            <p>bluetooth</p>
+                            <img className="usp-icon" src={minusIcon} alt="Minus icon"/>
+                            <p>ambilight</p>
+                        </div>
                     </div>
+                </div>
+                <h2>Alle tvs</h2>
+                <div className="filter-buttons">
+                    <button type="button" onClick={() => sayButtonTitle("Meest verkocht eerst")}>
+                        Meest verkocht eerst
+                    </button>
+                    <button type="button" onClick={() => sayButtonTitle("Goedkoopste eerst")}>
+                        Goedkoopste eerst
+                    </button>
+                    <button type="button" onClick={() => sayButtonTitle("Meest geschikt voor sport eerst")}>
+                        Meest geschikt voor sport eerst
+                    </button>
                 </div>
             </main>
         </>
