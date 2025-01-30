@@ -1,18 +1,11 @@
 import './App.css';
 import {bestSellingTv, inventory} from "./constants/inventory.js";
 import getTotalTvsAvailable, {getTotalTvsPurchased, getTotalTvsSold} from "./helpers/calculateStock.js";
-import {generateTvName, generateTvPrice, generateTvScreenSize} from "./helpers/bestsellingTvDetails.js";
+import {generateTvName, generateTvPrice, generateTvScreenSize} from "./helpers/tvDetails.js";
 import checkIcon from "./assets/check.png";
 import minusIcon from "./assets/minus.png";
 
 function App() {
-    const totalTvsSold = getTotalTvsSold(inventory, bestSellingTv);
-    const totalTvsPurchased = getTotalTvsPurchased(inventory, bestSellingTv);
-    const totalTvsAvailable = getTotalTvsAvailable(totalTvsSold, totalTvsPurchased);
-    const bestSellingTvName = generateTvName(bestSellingTv);
-    const bestSellingTvPrice = generateTvPrice(bestSellingTv);
-    const bestSellingTvScreenSizes = generateTvScreenSize(bestSellingTv);
-
     function sayButtonTitle(title) {
         console.log(title);
     }
@@ -25,26 +18,26 @@ function App() {
                 <div className="sales-overview">
                     <div className="sales-block">
                         <p>Aantal verkochte producten</p>
-                        <p className="counter-text">{totalTvsSold}</p>
+                        <p className="counter-text">{getTotalTvsSold(inventory, bestSellingTv)}</p>
                     </div>
                     <div className="purchased-block">
                         <p>Aantal ingekochte producten</p>
-                        <p className="counter-text">{totalTvsPurchased}</p>
+                        <p className="counter-text">{getTotalTvsPurchased(inventory, bestSellingTv)}</p>
                     </div>
                     <div className="available-block">
                         <p>Aantal te verkopen producten</p>
-                        <p className="counter-text">{totalTvsAvailable}</p>
+                        <p className="counter-text">{getTotalTvsAvailable(getTotalTvsSold(inventory, bestSellingTv), getTotalTvsPurchased(inventory, bestSellingTv))}</p>
                     </div>
                 </div>
                 <h2>Best verkochte tv</h2>
                 <div className="most-sold-block">
-                    <div className="bestseller-image-wrapper">
-                        <img className="bestseller-image" src={bestSellingTv.sourceImg} alt="Best verkochte tv"/>
+                    <div className="tv-image-wrapper">
+                        <img className="tv-image" src={bestSellingTv.sourceImg} alt="Best verkochte tv"/>
                     </div>
-                    <div className="bestseller-information">
-                        <p>{bestSellingTvName}</p>
-                        <p className="bestseller-price">{bestSellingTvPrice}</p>
-                        <p className="bestseller-sizes">{bestSellingTvScreenSizes}</p>
+                    <div className="tv-information">
+                        <p>{generateTvName(bestSellingTv)}</p>
+                        <p className="tv-price">{generateTvPrice(bestSellingTv)}</p>
+                        <p className="tv-sizes">{generateTvScreenSize(bestSellingTv)}</p>
                         <div className="bestseller-usps">
                             <img className="usp-icon" src={checkIcon} alt="Check icon"/>
                             <p>wifi</p>
@@ -71,6 +64,22 @@ function App() {
                         Meest geschikt voor sport eerst
                     </button>
                 </div>
+                <ul>
+                    {inventory.map((tv) => {
+                        return <li key={tv.type}>{
+                            <div className="tv-block">
+                                <div className="tv-image-wrapper">
+                                    <img className="tv-image" src={tv.sourceImg} alt="Afbeelding tv"/>
+                                </div>
+                                <div className="tv-information">
+                                    <p>{generateTvName(tv)}</p>
+                                    <p className="tv-price">{generateTvPrice(tv)}</p>
+                                    <p className="tv-sizes">{generateTvScreenSize(tv)}</p>
+                                </div>
+                            </div>
+                        }</li>;
+                    })}
+                </ul>
             </main>
         </>
     )

@@ -2,6 +2,11 @@ h2 {
     margin: 30px 0 10px 0;
 }
 
+ul,
+li {
+    list-style: none;
+}
+
 .sales-overview {
     display: flex;
     justify-content: space-between;
@@ -51,27 +56,34 @@ h2 {
     max-width: 1000px;
 }
 
-.bestseller-image-wrapper {
+.tv-block {
+    display: flex;
+    border-radius: 4px;
+    /*padding: 50px 30px;*/
+    max-width: 1000px;
+}
+
+.tv-image-wrapper {
     width: 200px;
     margin: 35px 0 35px 35px;
 }
 
-.bestseller-image {
+.tv-image {
     max-width: 100%;
 }
 
-.bestseller-information {
+.tv-information {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 20px 20px 20px 30px;
 }
 
-.bestseller-price {
+.tv-price {
     font-size: 20px;
 }
 
-.bestseller-sizes {
+.tv-sizes {
     font-size: 13px;
 }
 
