@@ -75,6 +75,23 @@ function App() {
                                     <p>{generateTvName(tv)}</p>
                                     <p className="tv-price">{generateTvPrice(tv)}</p>
                                     <p className="tv-sizes">{generateTvScreenSize(tv)}</p>
+                                    <div className="tv-usps">
+                                        {tv.options.map((option) => {
+                                            if (option.applicable === true) {
+                                                return (
+                                                    <div key={option.name} className="tv-usp">
+                                                        <img className="usp-icon" src={checkIcon} alt="Check icon"/>
+                                                        <p>{option.name}</p>
+                                                    </div>
+                                                )
+                                            } else return (
+                                                <div key={option.name} className="tv-usp">
+                                                    <img className="usp-icon" src={minusIcon} alt="Minus icon"/>
+                                                    <p>{option.name}</p>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         }</li>;

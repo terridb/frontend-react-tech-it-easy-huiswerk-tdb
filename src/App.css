@@ -93,6 +93,17 @@ li {
     gap: 5px;
 }
 
+.tv-usps {
+    display: flex;
+    gap: 10px;
+}
+
+.tv-usp {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .usp-icon {
     height: 10px;
 }
@@ -104,4 +115,5 @@ li {
 
 button {
     padding: 2px 5px;
+    margin-bottom: 30px;
 }
