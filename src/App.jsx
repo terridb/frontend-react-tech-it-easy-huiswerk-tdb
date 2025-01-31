@@ -4,6 +4,7 @@ import getTotalTvsAvailable, {getTotalTvsPurchased, getTotalTvsSold} from "./hel
 import {generateTvName, generateTvPrice, generateTvScreenSize} from "./helpers/tvDetails.js";
 import checkIcon from "./assets/check.png";
 import minusIcon from "./assets/minus.png";
+import soldout from "./assets/out-of-stock.png";
 import {sortBiggestScreensize, sortCheapestFirst, sortMostSoldFirst, sortRefreshrate} from "./helpers/tvSorting.js";
 
 function App() {
@@ -11,7 +12,6 @@ function App() {
     // function sayButtonTitle(title) {
     //     console.log(title);
     // }
-
     return (
         <>
             <main>
@@ -75,6 +75,8 @@ function App() {
                             <div className="tv-block">
                                 <div className="tv-image-wrapper">
                                     <img className="tv-image" src={tv.sourceImg} alt="Afbeelding tv"/>
+                                    {((tv.originalStock - tv.sold) <= 0) &&
+                                        <img className="sold-out" src={soldout} alt="Sold out sign"/>}
                                 </div>
                                 <div className="tv-information">
                                     <p>{generateTvName(tv)}</p>

@@ -1,3 +1,18 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
 h2 {
     margin: 30px 0 10px 0;
 }
@@ -6,7 +21,51 @@ ul,
 li {
     list-style: none;
 }
+/* ------------------------------- 2. Typography ----------------------------------- */
 
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.tv-block {
+    display: flex;
+    border-radius: 4px;
+    max-width: 1000px;
+}
+
+.tv-image-wrapper {
+    width: 200px;
+    margin: 35px 0 35px 35px;
+    position: relative;
+}
+
+.tv-image {
+    max-width: 100%;
+}
+
+.tv-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 20px 20px 30px;
+}
+
+.tv-price {
+    font-size: 20px;
+}
+
+.tv-sizes {
+    font-size: 13px;
+}
+
+.usp-icon {
+    height: 10px;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Sales overview ------------------------- */
 .sales-overview {
     display: flex;
     justify-content: space-between;
@@ -47,50 +106,27 @@ li {
     width: 100%;
 }
 
+/* --------------- 4.2 Most sold ------------------- */
 .most-sold-block {
     display: flex;
     border: 2px darkgray dashed;
     background-color: #ececec;
     border-radius: 4px;
-    /*padding: 50px 30px;*/
     max-width: 1000px;
-}
-
-.tv-block {
-    display: flex;
-    border-radius: 4px;
-    /*padding: 50px 30px;*/
-    max-width: 1000px;
-}
-
-.tv-image-wrapper {
-    width: 200px;
-    margin: 35px 0 35px 35px;
-}
-
-.tv-image {
-    max-width: 100%;
-}
-
-.tv-information {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 20px 20px 20px 30px;
-}
-
-.tv-price {
-    font-size: 20px;
-}
-
-.tv-sizes {
-    font-size: 13px;
 }
 
 .bestseller-usps {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+/* --------------- 4.3 Full tv overview ------------------------- */
+.sold-out {
+    width: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50px;
 }
 
 .tv-usps {
@@ -102,10 +138,6 @@ li {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-.usp-icon {
-    height: 10px;
 }
 
 .filter-buttons {
