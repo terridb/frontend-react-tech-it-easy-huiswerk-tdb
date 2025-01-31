@@ -1,0 +1,151 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+h2 {
+    margin: 30px 0 10px 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.tv-block {
+    display: flex;
+    border-radius: 4px;
+    max-width: 1000px;
+}
+
+.tv-image-wrapper {
+    width: 200px;
+    margin: 35px 0 35px 35px;
+    position: relative;
+}
+
+.tv-image {
+    max-width: 100%;
+}
+
+.tv-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 20px 20px 30px;
+}
+
+.tv-price {
+    font-size: 20px;
+}
+
+.tv-sizes {
+    font-size: 13px;
+}
+
+.usp-icon {
+    height: 10px;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Sales overview ------------------------- */
+.sales-overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 20px 0;
+}
+
+.counter-text {
+    font-size: 20px;
+}
+
+.sales-block {
+    padding: 20px;
+    border: 2px solid #6dad99;
+    border-radius: 4px;
+    background-color: #e8fff8;
+    color: #6dad99;
+    width: 100%;
+}
+
+.purchased-block {
+    padding: 20px;
+    border: 2px solid #6d81ad;
+    border-radius: 4px;
+    background-color: #e8f5ff;
+    color: #6d81ad;
+    width: 100%;
+}
+
+.available-block {
+    padding: 20px;
+    border: 2px solid #ad6d6d;
+    border-radius: 4px;
+    background-color: #ffe8e8;
+    color: #ad6d6d;
+    width: 100%;
+}
+
+/* --------------- 4.2 Most sold ------------------- */
+.most-sold-block {
+    display: flex;
+    border: 2px darkgray dashed;
+    background-color: #ececec;
+    border-radius: 4px;
+    max-width: 1000px;
+}
+
+.bestseller-usps {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* --------------- 4.3 Full tv overview ------------------------- */
+.sold-out {
+    width: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50px;
+}
+
+.tv-usps {
+    display: flex;
+    gap: 10px;
+}
+
+.tv-usp {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 2px 5px;
+    margin-bottom: 30px;
+}
