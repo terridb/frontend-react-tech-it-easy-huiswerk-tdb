@@ -39,3 +39,21 @@ export function sortRefreshrate(tvInventory) {
     console.log("Meest geschikt voor sport eerst");
     console.log(tvInventory);
 }
+
+export function sortBiggestScreensize(tvInventory) {
+    const bigToSmall = tvInventory.map((size) => {
+        return size.availableSizes.reverse();
+    })
+    bigToSmall.sort((a, b) => {
+        if (a > b) {
+            return -1;
+        }
+        if (a < b) {
+            return 1;
+        }
+        return 0;
+    })
+    console.log("Meest geschikt voor sport eerst");
+    console.log(bigToSmall);
+}
+

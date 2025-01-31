@@ -4,7 +4,7 @@ import getTotalTvsAvailable, {getTotalTvsPurchased, getTotalTvsSold} from "./hel
 import {generateTvName, generateTvPrice, generateTvScreenSize} from "./helpers/tvDetails.js";
 import checkIcon from "./assets/check.png";
 import minusIcon from "./assets/minus.png";
-import {sortCheapestFirst, sortMostSoldFirst, sortRefreshrate} from "./helpers/tvSorting.js";
+import {sortBiggestScreensize, sortCheapestFirst, sortMostSoldFirst, sortRefreshrate} from "./helpers/tvSorting.js";
 
 function App() {
     // Deel 1 van de opdracht, vervangen & samengevoegd met deel 2
@@ -64,6 +64,9 @@ function App() {
                     </button>
                     <button type="button" onClick={() => sortRefreshrate(inventory)}>
                         Meest geschikt voor sport eerst
+                    </button>
+                    <button type="button" onClick={() => sortBiggestScreensize(inventory)}>
+                        Grootste schermgroottes eerst
                     </button>
                 </div>
                 <ul>
