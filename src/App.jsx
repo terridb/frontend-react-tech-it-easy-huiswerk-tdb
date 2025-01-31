@@ -4,11 +4,13 @@ import getTotalTvsAvailable, {getTotalTvsPurchased, getTotalTvsSold} from "./hel
 import {generateTvName, generateTvPrice, generateTvScreenSize} from "./helpers/tvDetails.js";
 import checkIcon from "./assets/check.png";
 import minusIcon from "./assets/minus.png";
+import {sortCheapestFirst, sortMostSoldFirst, sortRefreshrate} from "./helpers/tvSorting.js";
 
 function App() {
-    function sayButtonTitle(title) {
-        console.log(title);
-    }
+    // Deel 1 van de opdracht, vervangen & samengevoegd met deel 2
+    // function sayButtonTitle(title) {
+    //     console.log(title);
+    // }
 
     return (
         <>
@@ -54,13 +56,13 @@ function App() {
                 </div>
                 <h2>Alle tvs</h2>
                 <div className="filter-buttons">
-                    <button type="button" onClick={() => sayButtonTitle("Meest verkocht eerst")}>
+                    <button type="button" onClick={() => sortMostSoldFirst(inventory)}>
                         Meest verkocht eerst
                     </button>
-                    <button type="button" onClick={() => sayButtonTitle("Goedkoopste eerst")}>
+                    <button type="button" onClick={() => sortCheapestFirst(inventory)}>
                         Goedkoopste eerst
                     </button>
-                    <button type="button" onClick={() => sayButtonTitle("Meest geschikt voor sport eerst")}>
+                    <button type="button" onClick={() => sortRefreshrate(inventory)}>
                         Meest geschikt voor sport eerst
                     </button>
                 </div>
