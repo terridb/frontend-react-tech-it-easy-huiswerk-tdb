@@ -53,7 +53,7 @@ export function sortBiggestScreensize(tvInventory) {
         }
         return 0;
     })
-    console.log("Meest geschikt voor sport eerst");
+    console.log("Grootste schermgrootte eerst");
     console.log(bigToSmall);
 }
 
